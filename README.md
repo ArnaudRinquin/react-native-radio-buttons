@@ -2,6 +2,8 @@
 
 A react component to implement _radio buttons_-like behaviors: multiple options, only on can be selected at once.
 
+Both the container and option nodes are customizable. Provided examples easily mimic the native Segmented Controls.
+
 ![example](./images/example.png)
 
 ## Install
