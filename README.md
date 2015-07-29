@@ -12,11 +12,10 @@ npm i -S react-native-radio-buttons
 
 ## Demo app
 
-```
+```sh
 git clone git@github.com:ArnaudRinquin/react-native-radio-buttons.git
 cd react-native-buttons
-npm install
-open examples/examples.xcodeproj
+npm run demo // npm install + copies radio-buttons.js to project folder and opens it
 ```
 
 And press `Cmd + R`
