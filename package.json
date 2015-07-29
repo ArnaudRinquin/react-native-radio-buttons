@@ -1,6 +1,6 @@
 {
   "name": "react-native-radio-buttons",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A react component to implement custom radio buttons-like behaviors: multiple options, only on can be selected at once.",
   "main": "radio-buttons.js",
   "directories": {
