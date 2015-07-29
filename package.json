@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "demo": "npm install && cp radio-buttons.js examples/radio-buttons.js && open examples/examples.xcodeproj"
+    "demo": "cp radio-buttons.js examples/radio-buttons.js && cd examples && npm i && open examples.xcodeproj"
   },
   "repository": {
     "type": "git",
