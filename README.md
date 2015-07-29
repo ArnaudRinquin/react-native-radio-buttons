@@ -1,6 +1,6 @@
 # react-native-radio-buttons
 
-A react component to implement _radio buttons_-like behaviors: multiple options, only on can be selected at once.
+A react component to implement _radio buttons_-like behaviors: multiple options, only one option can be selected at a given time.
 
 Both the container and option nodes are customizable. Provided examples easily mimic the native Segmented Controls.
 
