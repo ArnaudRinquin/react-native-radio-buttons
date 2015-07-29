@@ -2,6 +2,8 @@
 
 A react component to implement _radio buttons_-like behaviors: multiple options, only on can be selected at once.
 
+![example](./images/example.png)
+
 ## Install
 
 ```
