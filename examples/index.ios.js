@@ -3,8 +3,8 @@
  * https://github.com/facebook/react-native
  */
 
-var React = require('react-native');
-var {
+import React from 'react-native';
+const {
   AppRegistry,
   StyleSheet,
   Text,
@@ -12,21 +12,23 @@ var {
   TouchableWithoutFeedback,
 } = React;
 
-var RadioButtons = require('./radio-buttons');
+import { RadioButtons, SegmentedControls } from './lib';
 
-var examples = React.createClass({
-  getInitialState: function(){
-    return {};
-  },
-  render: function() {
+class Examples extends React.Component {
+  constructor(){
+    super();
+    this.state = {};
+  }
+  render() {
     return (<View>
       {this.renderbasic()}
       {this.renderSegmentControlClone()}
       {this.renderVerticalSegmentControlClone()}
+      {this.renderCustomSegmentControlClone()}
     </View>);
-  },
+  }
   // Super basic example
-  renderbasic:function(){
+  renderbasic(){
 
     const options = [
       "Option 1",
@@ -64,7 +66,7 @@ var examples = React.createClass({
         />
         <Text>Selected option: {this.state.selectedOption || 'none'}</Text>
       </View>);
-  },
+  }
   renderSegmentControlClone(){
     const options = [
       'Paid',
@@ -78,70 +80,16 @@ var examples = React.createClass({
       });
     }
 
-    const AppleBlueTint = '#007AFF';
-    const baseStyle = {
-      paddingTop: 5,
-      paddingBottom: 5,
-      textAlign: 'center',
-    };
-
-    const normalStyle = [baseStyle, {
-      color: AppleBlueTint,
-      backgroundColor: 'white',
-    }];
-    const selectedStyle = [baseStyle, {
-      color: 'white',
-      backgroundColor: AppleBlueTint,
-    }];
-
-    const baseOptionContainerStyle = {
-      flex: 1,
-    };
-
-    const separatorStyle = [baseOptionContainerStyle, {
-      borderLeftWidth: 1,
-      borderLeftColor: AppleBlueTint,
-    }];
-
-    function renderOption(option, selected, onSelect, index){
-      const style = selected ? selectedStyle : normalStyle;
-
-
-
-      return (
-        <TouchableWithoutFeedback onPress={onSelect} key={index}>
-          <View style={index > 0 ? separatorStyle : baseOptionContainerStyle}>
-            <Text style={style}>{option}</Text>
-          </View>
-        </TouchableWithoutFeedback>
-      );
-    }
-
-    const containerStyle = {
-      flexDirection: 'row',
-      backgroundColor: 'white',
-      borderColor: AppleBlueTint,
-      borderWidth: 1,
-      borderRadius: 5,
-      overflow: 'hidden',
-    };
-
-    function renderContainer(options){
-      return <View style={containerStyle}>{options}</View>;
-    }
-
     return (
       <View style={{margin: 20}}>
-        <RadioButtons
+        <SegmentedControls
           options={ options }
           onSelection={ setSelectedOption.bind(this) }
           selectedOption={this.state.selectedOption }
-          renderOption={ renderOption }
-          renderContainer={ renderContainer }
         />
         <Text style={{marginTop: 10}}>Selected option: {this.state.selectedSegment || 'none'}</Text>
       </View>);
-  },
+  }
   renderVerticalSegmentControlClone(){
     const options = [
       'So',
@@ -161,72 +109,44 @@ var examples = React.createClass({
       });
     }
 
-    const AppleBlueTint = '#007AFF';
-    const baseStyle = {
-      paddingTop: 5,
-      paddingBottom: 5,
-      textAlign: 'center',
-    };
-
-    const normalStyle = [baseStyle, {
-      color: AppleBlueTint,
-      backgroundColor: 'white',
-    }];
-    const selectedStyle = [baseStyle, {
-      color: 'white',
-      backgroundColor: AppleBlueTint,
-    }];
-
-    const baseOptionContainerStyle = {
-      flex: 1,
-    };
-
-    const separatorStyle = [baseOptionContainerStyle, {
-      borderTopWidth: 1,
-      borderTopColor: AppleBlueTint,
-    }];
-
-    function renderOption(option, selected, onSelect, index){
-      const style = selected ? selectedStyle : normalStyle;
-
-
-
-      return (
-        <TouchableWithoutFeedback onPress={onSelect} key={index}>
-          <View style={index > 0 ? separatorStyle : baseOptionContainerStyle}>
-            <Text style={style}>{option}</Text>
-          </View>
-        </TouchableWithoutFeedback>
-      );
-    }
-
-    const containerStyle = {
-      flexDirection: 'column',
-      backgroundColor: 'white',
-      borderColor: AppleBlueTint,
-      borderWidth: 1,
-      borderRadius: 5,
-      overflow: 'hidden',
-    };
-
-    function renderContainer(options){
-      return <View style={containerStyle}>{options}</View>;
-    }
-
     return (
       <View style={{margin: 20}}>
-        <RadioButtons
+        <SegmentedControls
+          direction={'column'}
           options={ options }
           onSelection={ setSelectedOption.bind(this) }
           selectedOption={this.state.selectedOption }
-          renderOption={ renderOption }
-          renderContainer={ renderContainer }
         />
         <Text style={{marginTop: 10}}>Selected option: {this.state.selectedVerticalSegment || 'none'}</Text>
       </View>);
   }
+  renderCustomSegmentControlClone(){
+    const options = [
+      'We',
+      'Love',
+      'Music',
+    ];
 
-});
+    function setSelectedOption(selectedCustomSegment){
+      this.setState({
+        selectedCustomSegment
+      });
+    }
+
+    return (
+      <View style={{margin: 20}}>
+        <SegmentedControls
+          tint= {'#f80046'}
+          selectedTint= {'white'}
+          backTint= {'#1e2126'}
+          options={ options }
+          onSelection={ setSelectedOption.bind(this) }
+          selectedOption={ this.state.selectedOption }
+        />
+        <Text style={{marginTop: 10}}>Selected option: {this.state.selectedCustomSegment || 'none'}</Text>
+      </View>);
+  }
+}
 
 var styles = StyleSheet.create({
   container: {
@@ -247,4 +167,4 @@ var styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('examples', () => examples);
+AppRegistry.registerComponent('examples', () => Examples);

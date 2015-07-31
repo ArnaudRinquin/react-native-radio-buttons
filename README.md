@@ -2,7 +2,7 @@
 
 A react component to implement _radio buttons_-like behaviors: multiple options, only one option can be selected at a given time.
 
-Both the container and option nodes are customizable. Provided examples easily mimic the native Segmented Controls.
+Both the container and option nodes are customizable. Comes with SegmentedControls clone, only more customizable (see below, animations to come).
 
 ![example](./images/example.png)
 
@@ -27,6 +27,9 @@ And press `Cmd + R`
 Here is an extensive overview of the component usage.
 
 ```jsx
+import { RadioButtons } from 'react-native-radio-buttons'
+
+// ...
 
 render() {
   const options = [
@@ -81,6 +84,86 @@ Will render this
 * `selectedOption - option` the initially selected option, optional
 * `renderOption - function(option, selected, onSelect, index)` should return an option node, default generate `<Text>` nodes and adds `{fontWieght:'bold'}` to the selected option.
 * `renderContainer - function(optionsNodes)` must render the container, default is RadioButtons.renderVerticalContainer (see below)
+
+### Full javascript SegmentedControls clone
+
+This library comes with a clone of the native `SegmentedControls`, based on `RadioButtons`.
+
+```
+import { SegmentedControls } from 'react-native-radio-buttons'
+
+// ...
+
+<SegmentedControls
+  options={ options }
+  onSelection={ setSelectedOption.bind(this) }
+  selectedOption={ this.state.selectedOption }
+/>
+```
+
+You override al the defaults through the props.
+
+```
+<SegmentedControls
+  tint= {'#f80046'}
+  selectedTint= {'white'}
+  backTint= {'#1e2126'}
+  options={ options }
+  onSelection={ setSelectedOption.bind(this) }
+  selectedOption={ this.state.selectedOption }
+/>
+```
+
+Here is the list of the props you might override:
+
+```
+const IOS_BLUE = '#007AFF';
+const IOS_WHITE = '#ffffff';
+
+const DEFAULTS = {
+  direction: 'row',
+
+  tint: IOS_BLUE,
+  backTint: IOS_WHITE,
+
+  paddingTop: 5,
+  paddingBottom: 5,
+  textAlign: 'center',
+
+  selectedTint: IOS_WHITE,
+  selectedBackgroundColor: IOS_WHITE,
+
+  separatorTint: IOS_BLUE,
+  separatorWidth: 1,
+
+  containerBorderTint: IOS_BLUE,
+  containerBorderWidth: 1,
+  containerBorderRadius: 5,
+
+}
+```
+
+You can also specify how to extract the labels fro the options through the extractText prop.
+
+```
+options = [
+  {
+    label: 'Option 1',
+    value: 'opt1'
+  },
+  {
+    label: 'Option 2',
+    value: 'opt2'
+  }
+]
+
+<SegmentedControls
+  options={ options }
+  onSelection={ setSelectedOption.bind(this) }
+  selectedOption={ this.state.selectedOption },
+  extractLabel={ (option) => option.label }
+/>
+```
 
 ## Helpers
 **RadioButtons.renderVerticalContainer;**
