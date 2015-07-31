@@ -22,7 +22,9 @@
     "react-native",
     "ios",
     "radio-buttons",
-    "radio"
+    "radio",
+    "segmentedcontrols",
+    "segmented-controls"
   ],
   "author": {
     "name": "Arnaud Rinquin",
