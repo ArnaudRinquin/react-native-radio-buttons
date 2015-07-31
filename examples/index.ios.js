@@ -122,14 +122,14 @@ class Examples extends React.Component {
   }
   renderCustomSegmentControlClone(){
     const options = [
-      'We',
-      'Love',
-      'Music',
+      { label:'We' },
+      { label:'Love' },
+      { label:'Music' },
     ];
 
-    function setSelectedOption(selectedCustomSegment){
+    function setSelectedOption(option){
       this.setState({
-        selectedCustomSegment
+        selectedCustomSegment: option.label,
       });
     }
 
