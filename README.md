@@ -143,7 +143,7 @@ const DEFAULTS = {
 }
 ```
 
-You can also specify how to extract the labels fro the options through the extractText prop.
+You can also specify how to extract the labels from the options through the extractText prop.
 
 ```
 options = [
@@ -161,7 +161,7 @@ options = [
   options={ options }
   onSelection={ setSelectedOption.bind(this) }
   selectedOption={ this.state.selectedOption },
-  extractLabel={ (option) => option.label }
+  extractText={ (option) => option.label }
 />
 ```
 
