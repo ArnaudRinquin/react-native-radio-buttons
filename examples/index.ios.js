@@ -129,21 +129,29 @@ class Examples extends React.Component {
 
     function setSelectedOption(option){
       this.setState({
-        selectedCustomSegment: option.label,
+        selectedCustomSegment: option,
       });
     }
 
     return (
-      <View style={{margin: 20}}>
+      <View style={{marginTop: 10, padding: 20, backgroundColor: 'white'}}>
+        <Text style={{paddingBottom: 10, fontWeight:'bold'}}>SegmentedControl (custom colors)</Text>
         <SegmentedControls
           tint= {'#f80046'}
           selectedTint= {'white'}
           backTint= {'#1e2126'}
           options={ options }
           onSelection={ setSelectedOption.bind(this) }
-          selectedOption={ this.state.selectedOption }
+          selectedOption={ this.state.selectedCustomSegment }
+          extractText={ (option) => option.label }
+          testOptionEqual={ (a, b) => {
+            if (!a || !b) {
+              return false;
+            }
+            return a.label === b.label
+          }}
         />
-        <Text style={{marginTop: 10}}>Selected option: {this.state.selectedCustomSegment || 'none'}</Text>
+        <Text style={{marginTop: 10}}>Selected option: {this.state.selectedCustomSegment&& this.state.selectedCustomSegment.label || 'none'}</Text>
       </View>);
   }
 }
