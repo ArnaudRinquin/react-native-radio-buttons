@@ -12,6 +12,8 @@ Both the container and option nodes are customizable. Comes with SegmentedContro
 npm i -S react-native-radio-buttons
 ```
 
+This module relies on ES6 modules, you should add the whitelist instruction in your Babel config (see [example `.babelrc`](./examples/.babelrc)).
+
 ## Demo app
 
 ```sh
