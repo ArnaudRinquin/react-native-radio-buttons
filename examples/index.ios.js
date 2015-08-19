@@ -254,6 +254,11 @@ class Examples extends React.Component {
           tint= {'#f80046'}
           selectedTint= {'white'}
           backTint= {'#1e2126'}
+          optionStyle= {{
+            fontSize: 30,
+            fontWeight: 'bold',
+            fontFamily: 'Snell Roundhand'
+          }}
           options={ options }
           onSelection={ setSelectedOption.bind(this) }
           selectedOption={ this.state.selectedCustomSegment }
