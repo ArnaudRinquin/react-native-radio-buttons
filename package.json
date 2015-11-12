@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "demo": "cp -r lib examples && cd examples && npm i && open examples.xcodeproj"
+    "demo": "cd examples && npm i && open examples.xcodeproj"
   },
   "repository": {
     "type": "git",

@@ -7,6 +7,6 @@
   },
   "dependencies": {
     "react-native": "^0.14.2",
-    "react-native-radio-buttons": "https://github.com/apprennet/react-native-radio-buttons.git#bumpUpRNVersion"
+    "react-native-radio-buttons": "^0.6.0"
   }
 }
