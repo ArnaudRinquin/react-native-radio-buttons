@@ -13,7 +13,7 @@ const {
   TouchableWithoutFeedback,
 } = React;
 
-import { RadioButtons, SegmentedControls } from './lib';
+import { RadioButtons, SegmentedControls } from 'react-native-radio-buttons';
 
 class Examples extends React.Component {
   constructor(){
