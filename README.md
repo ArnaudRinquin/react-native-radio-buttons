@@ -113,6 +113,11 @@ You override al the defaults through the props.
   options={ options }
   onSelection={ setSelectedOption.bind(this) }
   selectedOption={ this.state.selectedOption }
+  renderOption={(option, selected) => {
+    return (
+      // ...render stuff
+    )
+  }}
 />
 ```
 
