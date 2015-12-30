@@ -8,7 +8,7 @@ Both the container and option nodes are customizable. Comes with SegmentedContro
 
 ## Install
 
-```
+```sh
 npm i -S react-native-radio-buttons
 ```
 
@@ -91,7 +91,7 @@ Will render this
 
 This library comes with a clone of the native `SegmentedControls`, based on `RadioButtons`.
 
-```
+```jsx
 import { SegmentedControls } from 'react-native-radio-buttons'
 
 // ...
@@ -105,25 +105,21 @@ import { SegmentedControls } from 'react-native-radio-buttons'
 
 You override al the defaults through the props.
 
-```
+```jsx
 <SegmentedControls
   tint= {'#f80046'}
   selectedTint= {'white'}
   backTint= {'#1e2126'}
   options={ options }
+  allowFontScaling={ false } // default: true
   onSelection={ setSelectedOption.bind(this) }
   selectedOption={ this.state.selectedOption }
-  renderOption={(option, selected) => {
-    return (
-      // ...render stuff
-    )
-  }}
 />
 ```
 
 Here is the list of the props you might override:
 
-```
+```jsx
 const IOS_BLUE = '#007AFF';
 const IOS_WHITE = '#ffffff';
 
@@ -152,7 +148,7 @@ const DEFAULTS = {
 
 You can also specify how to extract the labels from the options through the extractText prop.
 
-```
+```jsx
 options = [
   {
     label: 'Option 1',
@@ -172,13 +168,27 @@ options = [
 />
 ```
 
+Or even specify the whole `renderOption()` function:
+
+```jsx
+<SegmentedControls
+  // ...
+  renderOption={(option, selected) => {
+    return (
+      // ...render stuff
+    )
+  }}
+}}
+```
+
 ## Helpers
 **RadioButtons.renderVerticalContainer;**
 
 A super simple `renderContainer` function that generates a <View> with `{flexDirection: "column"}`. It is used as default `rendeContainer` if you don't specify it.
 
 Usage:
-```
+
+```jsx
 <RadioButtons
   options={ options }
   onSelection={ setSelectedOption }
@@ -191,7 +201,8 @@ Usage:
 Another super simple `renderContainer` function that generates a <View> with `{flexDirection: "row"}`
 
 Usage:
-```
+
+```jsx
 <RadioButtons
   options={ options }
   onSelection={ setSelectedOption }
@@ -204,7 +215,8 @@ Usage:
 An helper that generates a simple `<View>` with the provided style.
 
 Usage:
-```
+
+```jsx
 <RadioButtons
   options={ options }
   onSelection={ setSelectedOption }
@@ -223,7 +235,8 @@ An helper that generates `<Text>` options wrapped in `<TouchableWithoutFeedback>
 
 
 Usage:
-```
+
+```jsx
 const normalStyle = {
   color: 'white'
 };
