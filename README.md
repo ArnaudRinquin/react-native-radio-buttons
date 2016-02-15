@@ -43,10 +43,10 @@ render() {
     this.setState({
       selectedOption
     });
-  };
+  }
 
   function renderOption(option, selected, onSelect, index){
-    const style = selected ? { fontWeight: 'bold'} : {}
+    const style = selected ? { fontWeight: 'bold'} : {};
 
     return (
       <TouchableWithoutFeedback onPress={onSelect} key={index}>
@@ -69,8 +69,7 @@ render() {
         renderContainer={ renderContainer }
       />
       <Text>Selected option: {this.state.selectedOption || 'none'}</Text>
-    </View>)
-  ;
+    </View>);
 }
 
 ```
@@ -103,7 +102,7 @@ import { SegmentedControls } from 'react-native-radio-buttons'
 />
 ```
 
-You override al the defaults through the props.
+You override all the defaults through the props.
 
 ```jsx
 <SegmentedControls
