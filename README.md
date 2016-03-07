@@ -18,7 +18,7 @@ This module relies on ES6 modules, you should add the whitelist instruction in y
 
 ```sh
 git clone git@github.com:ArnaudRinquin/react-native-radio-buttons.git
-cd react-native-buttons
+cd react-native-radio-buttons
 npm run demo
 ```
 

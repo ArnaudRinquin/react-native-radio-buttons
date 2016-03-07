@@ -8,8 +8,5 @@
   "dependencies": {
     "react-native": "^0.21.0",
     "react-native-radio-buttons": "^0.8.2"
-  },
-  "devDependencies": {
-    "react-native-cli": "^0.1.10"
   }
 }
