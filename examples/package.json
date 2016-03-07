@@ -3,10 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node_modules/react-native/packager/packager.sh"
+    "start": "react-native run-ios"
   },
   "dependencies": {
-    "react-native": "^0.14.2",
-    "react-native-radio-buttons": "^0.6.0"
+    "react-native": "^0.21.0",
+    "react-native-radio-buttons": "^0.8.2"
+  },
+  "devDependencies": {
+    "react-native-cli": "^0.1.10"
   }
 }

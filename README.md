@@ -145,6 +145,8 @@ const DEFAULTS = {
 }
 ```
 
+You can also specify `containerStyle` to use any style you want.
+
 You can also specify how to extract the labels from the options through the extractText prop.
 
 ```jsx

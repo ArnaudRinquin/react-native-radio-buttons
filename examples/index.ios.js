@@ -1,8 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
-
 import React from 'react-native';
 const {
   ScrollView,
@@ -198,7 +193,7 @@ class Examples extends React.Component {
         <SegmentedControls
           options={ options }
           onSelection={ setSelectedOption.bind(this) }
-          selectedOption={this.state.selectedOption }
+          selectedOption={ this.state.selectedSegment }
         />
         <Text style={{marginTop: 10}}>Selected option: {this.state.selectedSegment || 'none'}</Text>
       </View>);
@@ -229,7 +224,7 @@ class Examples extends React.Component {
           direction={'column'}
           options={ options }
           onSelection={ setSelectedOption.bind(this) }
-          selectedOption={this.state.selectedOption }
+          selectedOption={this.state.selectedVerticalSegment }
         />
         <Text style={{marginTop: 10}}>Selected option: {this.state.selectedVerticalSegment || 'none'}</Text>
       </View>);
@@ -258,6 +253,10 @@ class Examples extends React.Component {
             fontSize: 30,
             fontWeight: 'bold',
             fontFamily: 'Snell Roundhand'
+          }}
+          containerStyle= {{
+            marginLeft: 10,
+            marginRight: 10,
           }}
           options={ options }
           onSelection={ setSelectedOption.bind(this) }

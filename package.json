@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "demo": "cd examples && npm i && open examples.xcodeproj"
+    "demo": "cd examples && npm i && npm start"
   },
   "repository": {
     "type": "git",
@@ -35,8 +35,5 @@
   "bugs": {
     "url": "https://github.com/ArnaudRinquin/react-native-radio-buttons/issues"
   },
-  "homepage": "https://github.com/ArnaudRinquin/react-native-radio-buttons#readme",
-  "dependencies": {
-    "object-assign": "^3.0.0"
-  }
+  "homepage": "https://github.com/ArnaudRinquin/react-native-radio-buttons#readme"
 }
