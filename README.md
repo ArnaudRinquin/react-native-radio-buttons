@@ -22,8 +22,6 @@ cd react-native-radio-buttons
 npm run demo
 ```
 
-And press `Cmd + R`
-
 ## Usage
 
 Here is an extensive overview of the component usage.
