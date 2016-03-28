@@ -29,6 +29,7 @@ class Examples extends React.Component {
       {this.renderSegmentControlClone()}
       {this.renderVerticalSegmentControlClone()}
       {this.renderCustomSegmentControlClone()}
+      {this.renderCustomSegmentControlIOSStyle()}
     </ScrollView>);
   }
 
@@ -272,6 +273,44 @@ class Examples extends React.Component {
         />
         <Text style={{marginTop: 10}}>Selected option: {this.state.selectedCustomSegment&& this.state.selectedCustomSegment.value || 'none'}</Text>
       </View>);
+  }
+  
+  renderCustomSegmentControlIOSStyle(){
+     const options = [
+      'So',
+      'Many',
+      'Choices',
+      'It\'s',
+     
+      'Hard',
+    ];
+    function setSelectedOption(option){
+      this.setState({
+        selectediOSStyleSegment: option,
+      });
+    }
+    return(
+         <View style={{marginTop: 10, padding: 20, backgroundColor: 'white'}}> 
+            <SegmentedControls options={options}
+                        onSelection={ setSelectedOption.bind(this)}
+                        selectedOption={this.state.selectediOSStyleSegment}
+                        containerBorderRadius={0}
+                        selectedTint={'#F14D41'}
+                        selectedBackgroundColor={'white'}
+                        separatorTint={'white'}
+                        tint={'#444444'}
+                        containerBorderWidth={0}
+                        borderBottomWidth={2}
+                        borderBottomColor={'red'}
+                        paddingTop= {2}
+                        paddingBottom={2}
+                        height={35}
+                        fontSize={16}
+                        containerBorderBottomWidth={0.5}
+                        containerBorderBottomColor={'#dddddd'}
+         />
+    </View>
+    ); 
   }
 }
 
