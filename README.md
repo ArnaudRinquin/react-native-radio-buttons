@@ -79,9 +79,10 @@ Will render this
 ## Props
 
 * `options - []` mandatory array of anything, will be passed to `renderOption`
-* `onSelection - function(option){}` option selection callback
+* `onSelection - function(selectedOption, selectedIndex){}` option selection callback
+* `selectedIndex - index` the  initially selected index, optional.
 * `selectedOption - option` the initially selected option, optional
-* `renderOption - function(option, selected, onSelect, index)` should return an option node, default generate `<Text>` nodes and adds `{fontWieght:'bold'}` to the selected option.
+* `renderOption - function(option, selected, onSelect, index)` should return an option node, default generate `<Text>` nodes and adds `{fontWeight:'bold'}` to the selected option.
 * `renderContainer - function(optionsNodes)` must render the container, default is RadioButtons.renderVerticalContainer (see below)
 
 ### Full javascript SegmentedControls clone
