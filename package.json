@@ -15,7 +15,7 @@
     "url": "git@github.com:ArnaudRinquin/react-native-radio-buttons.git"
   },
   "peerDependencies": {
-    "react-native": ">=0.8.0"
+    "react-native": ">=0.25.0"
   },
   "keywords": [
     "react-component",
