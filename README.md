@@ -83,7 +83,7 @@ Will render this
 * `renderOption - function(option, selected, onSelect, index)` should return an option node, default generate `<Text>` nodes and adds `{fontWeight:'bold'}` to the selected option.
 * `renderContainer - function(optionsNodes)` must render the container, default is RadioButtons.renderVerticalContainer (see below)
 
-### Full javascript SegmentedControls clone
+### Full JavaScript SegmentedControls clone
 
 This library comes with a clone of the native `SegmentedControls`, based on `RadioButtons`.
 
@@ -208,7 +208,7 @@ Usage:
 />
 ```
 
-**RadioButtons.getViewContainerRenderer(viewCOntainerStyle);**
+**RadioButtons.getViewContainerRenderer(viewContainerStyle);**
 
 An helper that generates a simple `<View>` with the provided style.
 
