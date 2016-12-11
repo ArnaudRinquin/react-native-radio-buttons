@@ -82,6 +82,8 @@ Will render this
 * `selectedOption - option` the initially selected option, optional
 * `renderOption - function(option, selected, onSelect, index)` should return an option node, default generate `<Text>` nodes and adds `{fontWeight:'bold'}` to the selected option.
 * `renderContainer - function(optionsNodes)` must render the container, default is RadioButtons.renderVerticalContainer (see below)
+* `optionStyle` - optional styles to be applied to the `<Text>` elements of the options themselves.
+* `optionContainerStyle` - optional styles to be applied to the the `<View>` that contain the options.
 
 ### Full JavaScript SegmentedControls clone
 
@@ -103,13 +105,15 @@ You override all the defaults through the props.
 
 ```jsx
 <SegmentedControls
-  tint= {'#f80046'}
+  tint={'#f80046'}
   selectedTint= {'white'}
   backTint= {'#1e2126'}
   options={ options }
   allowFontScaling={ false } // default: true
   onSelection={ setSelectedOption.bind(this) }
   selectedOption={ this.state.selectedOption }
+  optionStyles={{fontFamily: 'AvenirNext-Medium'}}
+  optionContainerStyle={{flex: 1}}
 />
 ```
 
@@ -142,7 +146,7 @@ const DEFAULTS = {
 }
 ```
 
-You can also specify `containerStyle` to use any style you want.
+You can also specify `optionContainerStyle` and `optionStyle` to use any style you want.
 
 You can also specify how to extract the labels from the options through the extractText prop.
 
