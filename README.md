@@ -146,7 +146,11 @@ const DEFAULTS = {
 }
 ```
 
-You can also specify `optionContainerStyle` and `optionStyle` to use any style you want.
+You can also specify `containerStyle`, `optionContainerStyle`, and `optionStyle` to use any style you want:
+
+* `containerStyle` - optional styles to be applied to the outermost `<View>` component.
+* `optionStyle` - optional styles to be applied to the `<Text>` elements of the options themselves.
+* `optionContainerStyle` - optional styles to be applied to the the `<View>` that contain the options.
 
 You can also specify how to extract the labels from the options through the extractText prop.
 
