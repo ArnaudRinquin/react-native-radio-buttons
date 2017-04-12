@@ -84,6 +84,7 @@ Will render this
 * `renderContainer - function(optionsNodes)` must render the container, default is RadioButtons.renderVerticalContainer (see below)
 * `optionStyle` - optional styles to be applied to the `<Text>` elements of the options themselves.
 * `optionContainerStyle` - optional styles to be applied to the the `<View>` that contain the options.
+* `testOptionEqual- function(selectedOption, currentOption){}` optional compares and returns bool.
 
 ### Full JavaScript SegmentedControls clone
 
