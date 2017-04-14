@@ -113,7 +113,7 @@ You override all the defaults through the props.
   allowFontScaling={ false } // default: true
   onSelection={ setSelectedOption.bind(this) }
   selectedOption={ this.state.selectedOption }
-  optionStyles={{fontFamily: 'AvenirNext-Medium'}}
+  optionStyle={{fontFamily: 'AvenirNext-Medium'}}
   optionContainerStyle={{flex: 1}}
 />
 ```
