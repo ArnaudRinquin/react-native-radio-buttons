@@ -191,7 +191,7 @@ Or even specify the whole `renderOption()` function:
 ## Helpers
 **RadioButtons.renderVerticalContainer;**
 
-A super simple `renderContainer` function that generates a <View> with `{flexDirection: "column"}`. It is used as default `rendeContainer` if you don't specify it.
+A super simple `renderContainer` function that generates a <View> with `{flexDirection: "column"}`. It is used as default `renderContainer` if you don't specify it.
 
 Usage:
 
