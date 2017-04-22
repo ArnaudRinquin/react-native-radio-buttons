@@ -175,7 +175,21 @@ options = [
 />
 ```
 
-Or even specify the whole `renderOption()` function:
+If you decide to declare `options` as an array of objects, do also include a `testOptionEqual` prop for customized equality checking, otherwise changing `selectedOption` programmatically would not update the UI correctly. 
+
+With the above `options`, you'll need `testOptionEqual` to be as follows in order for `selectedOption` to display correctly.
+
+```jsx
+  <SegmentedControls
+    options={ options }
+    onSelection={ setSelectedOption.bind(this) }
+    selectedOption={ this.state.selectedOption },
+    extractText={ (option) => option.label }
+    testOptionEqual={(selectedValue, option) => selectedValue === option.value}
+  />
+```
+
+Moreover, you can even specify the whole `renderOption()` function:
 
 ```jsx
 <SegmentedControls
