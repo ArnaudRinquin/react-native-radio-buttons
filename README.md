@@ -183,7 +183,7 @@ With the above `options`, you'll need `testOptionEqual` to be as follows in orde
   <SegmentedControls
     options={ options }
     onSelection={ setSelectedOption.bind(this) }
-    selectedOption={ this.state.selectedOption },
+    selectedOption={ this.state.selectedOption }
     extractText={ (option) => option.label }
     testOptionEqual={(selectedValue, option) => selectedValue === option.value}
   />
