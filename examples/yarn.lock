@@ -4091,9 +4091,9 @@ react-native-branch@2.0.0-beta.3:
   version "0.15.2"
   resolved "https://github.com/expo/react-native-maps/archive/v0.15.2.tar.gz#e6a022511fbb53d0db5029dc0b159dd194a3763f"
 
-react-native-radio-buttons@^0.15.1:
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/react-native-radio-buttons/-/react-native-radio-buttons-0.15.1.tgz#36b193e22634b235d748a696a35ab5df11aad733"
+react-native-radio-buttons@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-radio-buttons/-/react-native-radio-buttons-1.0.0.tgz#be828b85897f80ca66ad66ad7adedb6b1890ab9d"
 
 react-native-safe-module@^1.1.0:
   version "1.2.0"
