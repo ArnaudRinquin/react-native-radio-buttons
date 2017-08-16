@@ -170,7 +170,7 @@ options = [
 <SegmentedControls
   options={ options }
   onSelection={ setSelectedOption.bind(this) }
-  selectedOption={ this.state.selectedOption },
+  selectedOption={ this.state.selectedOption }
   extractText={ (option) => option.label }
 />
 ```
