@@ -1,5 +1,7 @@
 # react-native-radio-buttons
 
+*IMPORTANT* this package is deprecated and no longer maintained in favor of the official [SegmentedControlIOS](https://facebook.github.io/react-native/docs/segmentedcontrolios.html) component.
+
 A react component to implement _radio buttons_-like behaviors: multiple options, only one option can be selected at a given time.
 
 Both the container and option nodes are customizable. Comes with SegmentedControls clone, only more customizable (see below, animations to come).
