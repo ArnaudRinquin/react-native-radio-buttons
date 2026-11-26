@@ -1,3 +1,6 @@
+> [!WARNING]
+> **Deprecated.** This project is no longer maintained and is kept for reference only. Issues and pull requests are not monitored.
+
 # react-native-radio-buttons
 
 *IMPORTANT* this package is deprecated and no longer maintained in favor of the official [SegmentedControlIOS](https://facebook.github.io/react-native/docs/segmentedcontrolios.html) component.
